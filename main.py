@@ -26,13 +26,14 @@ def find_mismatch(text):
             break
 
         if are_matching(opening_brackets_stack[i][0], opening_brackets_stack[length - i][0]) is not True:
-            return opening_brackets_stack[i][1]
+            return opening_brackets_stack[i][1] if opening_brackets_stack[i][0] not in ")]}" else opening_brackets_stack[i+1][1]
     
     return "Success"
 
 
 def main():
-    text = input()
+    # text = input()
+    text = "[{)}]"
     mismatch = find_mismatch(text)
     print(mismatch)
 
