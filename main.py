@@ -32,8 +32,7 @@ def find_mismatch(text):
 
 
 def main():
-    # text = input()
-    text = "[{)}]"
+    text = input()
     mismatch = find_mismatch(text)
     print(mismatch)
 
