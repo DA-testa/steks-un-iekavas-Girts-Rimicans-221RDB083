@@ -43,6 +43,7 @@ def main():
 
     text = input()
     if (text[0].upper() == "I"):
+        text = input()
         mismatch = find_mismatch(text)
         print(mismatch)
 
