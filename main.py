@@ -12,13 +12,14 @@ def find_mismatch(text):
     opening_brackets_stack = []
     for i, next in enumerate(text):
         if next in "([{":
-            opening_brackets_stack.append(Bracket(next, i + 1))
+            opening_brackets_stack.insert(0, (Bracket(next, i + 1)))
+            pass
 
         if next in ")]}":
             if len(opening_brackets_stack) == 0 or are_matching(opening_brackets_stack[0][0], next) is False:
                 return opening_brackets_stack[0][1] + 1
             else:
-                opening_brackets_stack.pop()
+                opening_brackets_stack.pop(0)
 
     if len(opening_brackets_stack) != 0:
         return opening_brackets_stack[0][1]
