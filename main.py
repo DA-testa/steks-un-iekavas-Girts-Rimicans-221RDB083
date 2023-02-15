@@ -22,7 +22,7 @@ def find_mismatch(text):
             if are_matching(opening_brackets_stack[0][0], bracket[0]):
                 opening_brackets_stack.pop()
             else:
-                return bracket[1] + 1
+                return bracket[1]
 
     if len(opening_brackets_stack) != 0:
         return opening_brackets_stack[0][1] + 1
