@@ -42,8 +42,9 @@ def main():
     #     print(mismatch)
 
     text = input()
-    mismatch = find_mismatch(text)
-    print(mismatch)
+    if (text[0] == "i"):
+        mismatch = find_mismatch(text)
+        print(mismatch)
 
 if __name__ == "__main__":
     main()
