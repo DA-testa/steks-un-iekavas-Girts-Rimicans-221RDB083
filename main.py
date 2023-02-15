@@ -42,7 +42,7 @@ def main():
     #     print(mismatch)
 
     text = input()
-    if (text[0] == "i"):
+    if (text[0].upper() == "I"):
         mismatch = find_mismatch(text)
         print(mismatch)
 
